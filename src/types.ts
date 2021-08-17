@@ -7,9 +7,8 @@ export type Character = {
 }
 
 export type SwapiResp = {
-  count?: number;
-  next?: string;
-  previous?: string;
-  isLoading?: boolean;
-  results?: Character[];
+    count?: number;
+    next?: string;
+    previous?: string;
+    results?: Character[];
 }

@@ -1,6 +1,6 @@
 import { Component, Accessor } from "solid-js";
 
-import { swapiResp } from "../store";
+import { state } from "../store";
 
 import Button from "./ui/Button";
 import { Input } from "./ui/Input";
@@ -17,11 +17,11 @@ export const Search: Component<Props> = ({ onClick, onSearch, searchName }) => {
             <Button
                 text="previous"
                 onClick={onClick(-1)}
-                state={swapiResp}
+                state={state}
                 disableStateProp="previous"
             />
             <Input value={searchName} onKeyUp={onSearch} />
-            <Button text="next" onClick={onClick(1)} state={swapiResp} disableStateProp="next" />
+            <Button text="next" onClick={onClick(1)} state={state} disableStateProp="next" />
         </div>
     );
 };
