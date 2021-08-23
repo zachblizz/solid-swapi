@@ -17,11 +17,16 @@ export const Search: Component<Props> = ({ onClick, onSearch, searchName }) => {
             <Button
                 text="previous"
                 onClick={onClick(-1)}
-                state={state}
-                disableStateProp="previous"
+                isDisabled={!Boolean(state.previous)}
+                data-testid="prev-btn"
             />
-            <Input value={searchName} onKeyUp={onSearch} />
-            <Button text="next" onClick={onClick(1)} state={state} disableStateProp="next" />
+            <Input value={searchName} onKeyUp={onSearch} data-testid="search-input" />
+            <Button
+                text="next"
+                onClick={onClick(1)}
+                isDisabled={!Boolean(state.next)}
+                data-testid="prev-btn"
+            />
         </div>
     );
 };

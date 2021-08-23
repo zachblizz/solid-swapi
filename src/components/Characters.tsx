@@ -1,6 +1,6 @@
 import { Component, For, onMount, createSignal } from "solid-js";
 
-import { getChars, state, setState } from "../store";
+import { getChars, state } from "../store";
 
 import CharCard from "./CharCard";
 import { Search } from "./Search";
